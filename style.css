@@ -13,3 +13,65 @@ License: GNU General Public License v3 or later.
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hello-elementor-child
 */
+
+/* Global
+   ========================================================================== */
+
+html, body {
+	font-size: 1.0625rem; }
+
+html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
+	font-family: Raleway, sans-serif; }
+
+/* Navbar
+   ========================================================================== */
+   
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted, 
+.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:focus {
+	color: #1C6CC2; }
+
+.main-header .elementor-top-column {
+	border-bottom: 1px solid #1C6CC2;	}
+
+@media screen and (max-width: 1024px) {
+	.main-header .elementor-top-column .elementor-nav-menu--toggle {
+		display: none; }
+
+	[type=button]:focus, [type=submit]:focus, button:focus {
+		outline: none; }
+
+	.rmp_menu_trigger {
+		height: 65px !important;
+		background: transparent !important;	}
+
+	.rmp-container {
+		width: 50% !important;
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); }
+
+	.rmp-container,
+	.responsive-menu-pro-inner,
+	.rmp-menu-wrap .rmp-menu-item-link {
+		background: #3f3f3f !important;
+		border-top: 1px solid #3f3f3f !important; }
+
+	.rmp-menu-wrap .rmp-menu-current-item .rmp-menu-item-link,
+	.rmp-menu-wrap .rmp-menu-item-link:hover,
+	.rmp-menu-wrap .rmp-menu-item-link:focus,
+	.rmp-menu-wrap .rmp-menu-item-link:active {
+		color: #1C6CC2 !important;;
+		background: #FFFFFF !important; }
+
+	.responsive-menu-pro-inner {
+		width: 32px !important; }
+
+	.rmp-menu-wrap .rmp-menu-item-link {
+		font-size: 1.125rem !important;
+		font-family: Raleway, sans-serif !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.rmp-container {
+		width: 75% !important; }
+}
