@@ -14,14 +14,43 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hello-elementor-child
 */
 
+
 /* Global
    ========================================================================== */
 
 html, body {
 	font-size: 1.0625rem; }
 
-html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
-	font-family: Raleway, sans-serif; }
+html,
+body,
+.elementor-widget-text-editor,
+.elementor-widget-heading .elementor-heading-title,
+.elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
+	font-family: Raleway, sans-serif !important; }
+
+.responsive-size {
+  margin: 0 auto; }
+
+@media screen and (min-width: 1024.98px) and (max-width: 1212.98px) {
+	.responsive-size {
+		width: 990px !important; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1030px) {
+	.responsive-size {
+		max-width: 87.811% !important; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+	.responsive-size {
+		max-width: 84.811% !important; }
+}
+
+@media screen and (max-width: 767.98px) {
+	.responsive-size {
+		max-width: 87.811% !important; }
+}
+
 
 /* Navbar
    ========================================================================== */
@@ -75,3 +104,38 @@ html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
 	.rmp-container {
 		width: 75% !important; }
 }
+
+
+/* Footer
+   ========================================================================== */
+
+footer .elementor-social-icon {
+	font-size: 1.85rem;
+  width: 1.85rem;
+  height: 1.85rem;
+	background-color: transparent !important; }
+
+footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-child(2) {
+	margin-left: -6px; }
+
+@media screen and (max-width: 1024px) {
+	footer:last-of-type {
+		background-color: #1B5989 !important; }
+
+	footer .elementor-social-icon {
+		font-size: 1.5rem;
+	  width: 1.5rem;
+	  height: 1.5rem; }
+
+  footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:first-child {
+		margin-left: -8px; }
+
+	footer .elementor-form .elementor-form-fields-wrapper > .elementor-column:first-child {
+		width: 80%; }
+}
+
+@media screen and (max-width: 768px) {
+	footer .elementor-form .elementor-form-fields-wrapper > .elementor-column:first-child {
+		width: 75%; }	
+}
+
