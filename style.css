@@ -55,6 +55,9 @@ body,
 /* Navbar
    ========================================================================== */
    
+body.page-id-25 .main-header {
+	background-color: #FFFFFF !important; }
+
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted, 
