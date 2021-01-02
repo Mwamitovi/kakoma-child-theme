@@ -18,15 +18,21 @@ Text Domain: hello-elementor-child
 /* Global
    ========================================================================== */
 
-html, body {
+html,
+body {
 	font-size: 1.0625rem; }
 
 html,
 body,
 .elementor-widget-text-editor,
 .elementor-widget-heading .elementor-heading-title,
-.elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
+.elementor-widget-nav-menu .elementor-nav-menu .elementor-item,
+.elementor-widget-posts .elementor-post__title, 
+.elementor-widget-posts .elementor-post__title a {
 	font-family: Raleway, sans-serif !important; }
+
+body {
+	background-color: #F4F4F4; }
 
 .responsive-size {
   margin: 0 auto; }
@@ -142,3 +148,52 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 		width: 75%; }	
 }
 
+
+/* Home page
+   ========================================================================== */
+
+.post--grid .elementor-text-editor > p {
+	font-size: 1rem; 
+	margin-right: .9rem; }
+
+.post--grid .elementor-posts .elementor-post__card {
+	overflow: visible;
+	border-radius: 8.5px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__badge {
+	margin-left: -10px !important;}
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__thumbnail {
+	border-top-left-radius: 8.5px;
+	border-top-right-radius: 8.5px; }
+
+.post--grid .elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+	margin-bottom: 0px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__title {
+	font-size: 18px;
+	font-weight: 600; }
+
+.post--grid .custom-divider {
+	padding-bottom: 10px; }
+
+.post--grid .custom-divider .post--title-divider {
+	display: block;
+	margin-right: 150px;
+	border-top: 2px solid #1C6CC2; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__text {
+	padding: 12px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__excerpt,
+.post--grid .elementor-posts .elementor-post__card .elementor-post__title {
+	margin-bottom: 7.5px; }
+
+.post--grid .elementor-widget-button .elementor-button {
+	font-size: 1rem;
+	text-align: left;
+	background-color: transparent; }
+
+.post--grid .elementor-widget-button .elementor-button .elementor-button-icon {
+	color: #1C6CC2;
+	margin-top: 8.5px; }
