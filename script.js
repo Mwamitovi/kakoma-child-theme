@@ -17,5 +17,14 @@ jQuery(document).ready(function( $ ){
       return text + "...";
     }));
   });
+
+  // append ellipsis within to post content
+  $(".project--title .elementor-column-wrap .elementor-widget-wrap > div:last-child .elementor-heading-title").each(function() {
+    $(this).replaceWith($(this).html(function() {
+      var text = $(this).text();
+       
+      return "(" + text + ")";
+    }));
+  });
       
 });
