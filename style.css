@@ -83,6 +83,20 @@ body.page-id-25 .main-header {
 		border-color: transparent !important; }
 }
 
+/* contact-me page */
+
+@media screen and (max-width: 1024px) {
+	body.page-id-21 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-21 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-21 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+}
+
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted, 
@@ -513,6 +527,60 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 }
 
 
+/* Contact-me page
+   ========================================================================== */
+
+.contact-me--form {
+	margin-top: 48px; }
+
+.contact-me--form .elementor-field-group {
+	margin-bottom: 32px !important; }
+
+.contact-me--form textarea.elementor-field-textual {
+	padding: 14px 16.5px; }
+
+.contact-me--form .elementor-button.elementor-size-md {
+	font-size: 18px;
+	padding: 20px 35px; }
+
+.contact-me--inner-section .contact-me--title-size-md {
+	display: none; }
+
+@media screen and (max-width: 1024px) {
+	.contact-me-section {
+		padding-top: 50px !important; }
+
+	.contact-me-section > .elementor-container > .elementor-row > .elementor-column {
+		width: 100% !important;	}
+
+	.contact-me-section > .elementor-container > .elementor-row > .elementor-column:not(:first-child) {
+		background-color: #FFFFFF; }
+
+	.contact-me-section .elementor-container > .elementor-row .elementor-column:nth-child(2) .contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+		flex-wrap: nowrap;
+		flex-direction: column; }
+
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-field-group:last-of-type {
+		width: 100% !important; }
+
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-button {
+		max-width: 50%;
+		margin: 0 auto; }
+
+	.contact-me--inner-section .contact-me--title {
+		display: none; }
+
+	.contact-me--inner-section .contact-me--title-size-md {
+		padding-top: 65px;
+		padding-bottom: 30px;
+		text-align: center;
+		display: block; }
+}
+
+@media screen and (max-width: 420px) {
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-button {
+		max-width: 75%; }	
+}
 
 
 
