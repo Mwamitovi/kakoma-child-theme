@@ -18,6 +18,42 @@ Text Domain: hello-elementor-child
 /* Global
    ========================================================================== */
 
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url('fonts/Montserrat-Black.eot');                           /* IE9 Compat Modes */
+  src: url('fonts/Montserrat-Black.woff2') format('woff2'),         /* Super Modern Browsers */
+       url('fonts/Montserrat-Black.woff') format('woff'),           /* Pretty Modern Browsers */
+       url('fonts/Montserrat-Black.ttf')  format('truetype'),       /* Safari, Android, iOS */
+       url('fonts/Montserrat-Black.svg') format('svg');             /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('fonts/Montserrat-ExtraBold.eot');
+  src: url('fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+       url('fonts/Montserrat-ExtraBold.woff') format('woff'),
+       url('fonts/Montserrat-ExtraBold.ttf')  format('truetype'),
+       url('fonts/Montserrat-ExtraBold.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('fonts/Montserrat-Regular.eot');
+  src: url('fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('fonts/Montserrat-Regular.woff') format('woff'),
+       url('fonts/Montserrat-Regular.ttf')  format('truetype'),
+       url('fonts/Montserrat-Regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('fonts/Raleway-Regular.eot');
+  src: url('fonts/Raleway-Regular.woff2') format('woff2'),
+       url('fonts/Raleway-Regular.woff') format('woff'),
+       url('fonts/Raleway-Regular.ttf')  format('truetype'),
+       url('fonts/Raleway-Regular.svg') format('svg');
+}
+
 html,
 body {
 	font-size: 1.0625rem; }
@@ -25,11 +61,20 @@ body {
 html,
 body,
 .elementor-widget-text-editor,
-.elementor-widget-heading .elementor-heading-title,
-.elementor-widget-nav-menu .elementor-nav-menu .elementor-item,
+.elementor-widget-posts .elementor-post__excerpt p {
+	font-family: 'Raleway-Regular', sans-serif !important; }
+
+.title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
+	font-size: 3.15rem; }
+
+.elementor-widget-heading h1.elementor-heading-title {
+	font-family: 'Montserrat-Black', Sans-serif !important; 
+	font-size: 3.5rem; }
+
 .elementor-widget-posts .elementor-post__title, 
 .elementor-widget-posts .elementor-post__title a {
-	font-family: Raleway, sans-serif !important; }
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
 
 body {
 	background-color: #F4F4F4; }
@@ -106,6 +151,9 @@ body.page-id-25 .main-header {
 .main-header .elementor-top-column {
 	border-bottom: 1px solid #1C6CC2;	}
 
+.main-header .elementor-nav-menu--main .elementor-item {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
 @media screen and (max-width: 1024px) {
 	.main-header .elementor-top-column .elementor-nav-menu--toggle {
 		display: none; }
@@ -159,6 +207,16 @@ body.page-id-25 .main-header {
 /* Footer
    ========================================================================== */
 
+footer .elementor-widget-heading .elementor-heading-title {
+	font-family: 'Montserrat-Black', Sans-serif !important; }
+
+footer .elementor-widget-heading:last-of-type .elementor-heading-title {
+	font-family: 'Montserrat-Regular', Sans-serif !important; 
+	font-size: .85rem !important; }
+
+footer .elementor-widget-heading:first-of-type .elementor-heading-title {
+	font-size: 2.45rem; }
+
 footer .elementor-social-icon {
 	font-size: 1.85rem;
   width: 1.85rem;
@@ -167,6 +225,11 @@ footer .elementor-social-icon {
 
 footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-child(2) {
 	margin-left: -6px; }
+
+footer .elementor-widget-icon-list .elementor-icon-list-item, 
+footer .elementor-widget-icon-list .elementor-icon-list-item a {
+	font-family: 'Montserrat-Regular', Sans-serif !important; 
+	font-size: .9rem; }
 
 @media screen and (max-width: 1024px) {
 	footer:last-of-type {
@@ -194,6 +257,7 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
    ========================================================================== */
 
 .post--grid .elementor-text-editor > p {
+	font-size: .9rem;
 	margin-right: .9rem; }
 
 .post--grid .elementor-posts .elementor-post__card {
@@ -201,6 +265,9 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 	border-radius: 8.5px; }
 
 .post--grid .elementor-posts .elementor-post__card .elementor-post__badge {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600;
+	letter-spacing: .025rem;
 	margin-left: -10px !important; }
 
 .post--grid .elementor-posts .elementor-post__card .elementor-post__thumbnail {
@@ -211,7 +278,7 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 	margin-bottom: 0px; }
 
 .post--grid .elementor-posts .elementor-post__card .elementor-post__title {
-	font-size: 18px;
+	font-size: 17.25px;
 	font-weight: 600; }
 
 .post--grid .custom-divider {
@@ -230,7 +297,9 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 	margin-bottom: 7.5px; }
 
 .post--grid .elementor-widget-button .elementor-button {
-	font-size: 1rem;
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600 !important;
+	font-size: 1.125rem;
 	text-align: left;
 	background-color: transparent; }
 
@@ -298,11 +367,15 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 	color: #7A7A7A;
 	border-color: #7A7A7A; }
 
+.portfolio-section-4 .elementor-column .elementor-button {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600 !important; }
+
 .portfolio-section-4 .elementor-column:first-of-type .elementor-button {
-	padding: 20px 65px; }
+	padding: 25px 70px; }
 
 .portfolio-section-4 .elementor-column:last-of-type .elementor-button {
-	padding: 20px 35px; }
+	padding: 25px 40px; }
 
 .portfolio-section-4 .elementor-column .elementor-button:focus,
 .portfolio-section-4 .elementor-column .elementor-button:hover,
@@ -327,6 +400,21 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.125);
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px; }
+
+.project--title .elementor-widget-heading:first-of-type .elementor-heading-title {
+	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
+	font-size: 1.75rem; }
+
+.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title,
+.project--title .elementor-widget-heading:nth-of-type(3) .elementor-heading-title {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title { 
+	padding-top: 7.5px;
+	padding-bottom: 7.5px; }
+
+.project--title .elementor-widget-heading:nth-of-type(3) .elementor-heading-title {
+	font-size: .825rem; }
 
 .projects--portfolio .elementor-card-shadow-yes .elementor-post__card {
 	box-shadow: none; }
@@ -536,12 +624,19 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 .contact-me--form .elementor-field-group {
 	margin-bottom: 32px !important; }
 
+.contact-me--form .elementor-field-group .elementor-field-label,
+.contact-me--form .elementor-field-group .elementor-field-textual {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
 .contact-me--form textarea.elementor-field-textual {
 	padding: 14px 16.5px; }
 
 .contact-me--form .elementor-button.elementor-size-md {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
 	font-size: 18px;
-	padding: 20px 35px; }
+	font-weight: 600;
+	letter-spacing: .05rem;
+	padding: 25px 40px; }
 
 .contact-me--inner-section .contact-me--title-size-md {
 	display: none; }
