@@ -26,5 +26,25 @@ jQuery(document).ready(function( $ ){
       return "(" + text + ")";
     }));
   });
+
+
+  /* About me page
+   ========================================================================== */
+
+  // support dynamic styling based on size
+  $(window).resize(function() {
+    if ($(window).width() < 1025) {
+      $('.about-me-section').removeClass('responsive-size');
+      $('.about-me--inner-section').addClass('responsive-size');
+    } else {
+      $('.about-me-section').addClass('responsive-size');
+      $('.about-me--inner-section').removeClass('responsive-size');
+    }
+  }).resize(); // trigger resize event initially
       
 });
+
+
+
+
+
