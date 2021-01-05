@@ -64,8 +64,24 @@ body {
 /* Navbar
    ========================================================================== */
    
+/* portfolio page */
+
 body.page-id-25 .main-header {
 	background-color: #FFFFFF !important; }
+
+/* about-me page */
+
+@media screen and (max-width: 1024px) {
+	body.page-id-23 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-23 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-23 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+}
 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
@@ -470,6 +486,31 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 }
 
 
+/* About-me page
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+	.about-me-section {
+		padding-top: 50px !important; }
+
+	.about-me-section > .elementor-container > .elementor-row {
+		flex-direction: column-reverse; }
+
+	.about-me-section > .elementor-container > .elementor-row > .elementor-column {
+		width: 100% !important;	}
+
+	.about-me-section > .elementor-container > .elementor-row > .elementor-column:first-child {
+		background-color: #FFFFFF; }
+
+	.about-me--title {
+		display: inline-flex;
+		padding-top: 65px;
+		padding-bottom: 30px;
+		width: auto !important;	}
+
+	.about-me--title:not(:first-of-type) {
+		padding-left: 10px;	}
+}
 
 
 
