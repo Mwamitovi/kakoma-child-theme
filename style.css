@@ -54,6 +54,14 @@ Text Domain: hello-elementor-child
        url('fonts/Raleway-Regular.svg') format('svg');
 }
 
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0; }
+
+	100% {
+		opacity: 1; }
+}
+
 html,
 body {
 	font-size: 1.0625rem; }
@@ -68,9 +76,19 @@ body,
 	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
 	font-size: 3.15rem; }
 
+@media screen and (max-width: 420px) {
+	.title__lead.elementor-widget-heading h1.elementor-heading-title {
+		font-size: 2.15rem; }	
+}
+
 .elementor-widget-heading h1.elementor-heading-title {
 	font-family: 'Montserrat-Black', Sans-serif !important; 
 	font-size: 3.5rem; }
+
+@media screen and (max-width: 420px) {
+	.elementor-widget-heading h1.elementor-heading-title {
+		font-size: 2.5rem; }	
+}
 
 .elementor-widget-posts .elementor-post__title, 
 .elementor-widget-posts .elementor-post__title a {
@@ -201,6 +219,12 @@ footer .elementor-widget-heading:last-of-type .elementor-heading-title {
 footer .elementor-widget-heading:first-of-type .elementor-heading-title {
 	font-size: 2.45rem; }
 
+
+@media screen and (max-width: 420px) {
+	footer .elementor-widget-heading:first-of-type .elementor-heading-title {
+		font-size: 2rem; }
+}
+
 footer .elementor-social-icon {
 	font-size: 1.85rem;
   width: 1.85rem;
@@ -287,6 +311,10 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 	text-align: left;
 	background-color: transparent; }
 
+@media screen and (max-width: 420px) {
+	.post--grid .elementor-widget-button .elementor-button {
+		font-size: 1rem; }
+}
 
 @media screen and (max-width: 1024px) {
 	.post--grid:not(.projects--portfolio) .elementor-posts > .elementor-post:last-of-type,
@@ -526,6 +554,12 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 	.courses-section {
 		padding-top: 80px !important;	}
+}
+
+
+@media screen and (max-width: 420px) {
+	.elementor-button.elementor-size-lg {
+		padding: 20px 40px;	}
 }
 
 .projects--portfolio .elementor-posts .elementor-post__card .elementor-post__thumbnail {
@@ -805,6 +839,8 @@ body.page-id-25 .main-header {
 		padding: 20px 15px !important; }
 }
 
+/* bug fix: uneven button margins change */
+
 @media screen and (max-width: 486px) {
 	.button--grid.elementor-column {
 		margin-top: 22.5px; }
@@ -840,25 +876,69 @@ body.page-id-25 .main-header {
 /* Blog page
    ========================================================================== */
 
-.lead-blog-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap .elementor-element:nth-child(2) {
+.main-blog-section .btn--nav .elementor-row {
+	flex-direction: column; }
+
+.main-blog-section .btn--nav .subtitle--lead.elementor-column,
+.main-blog-section .btn--nav .button--grid.elementor-column {
+	width: 100% !important; }
+
+.main-blog-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+	width: auto !important;
+	margin: 0 auto !important; }
+
+.main-blog-section .subtitle--lead .elementor-widget-heading .elementor-heading-title {
+	font-size: 2.25rem; }
+
+@media screen and (max-width: 420px) {
+	.main-blog-section .subtitle--lead .elementor-widget-heading .elementor-heading-title {
+		font-size: 1.65rem; }
+}
+
+.main-blog-section .btn--nav	.button--grid.elementor-column {
+	margin-top: 22.5px; }
+
+.main-blog-section .btn--nav .button--grid .elementor-button {
+	padding-top: 9px;
+	padding-bottom: 9px; }
+
+.main-blog--inner-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap .elementor-element:nth-child(2) {
 	width: 60% !important; }
 
-.lead-blog-section .elementor-widget-divider {
+.main-blog--inner-section .elementor-widget-divider {
 	width: 5% !important; 
  	margin: 62.5px -100px 0 12.5px !important; }
 
-.lead-blog-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap .elementor-element:last-child {
+.main-blog--inner-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap .elementor-element:last-child {
 	width: 35% !important; 
   margin-top: 10px; }
 
-.lead-blog-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap > .elementor-widget-text-editor {
+.main-blog--inner-section .elementor-row > .elementor-column:last-child .elementor-widget-wrap > .elementor-widget-text-editor {
 	font-family: 'Montserrat-Regular', Sans-serif !important;
 	font-weight: 600;
 	color: #1C6CC2;
 	margin-left: 26.5%; }
 
+.main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s; }
+
+.main-blog-section .btn--nav .button--grid .elementor-button {
+	margin-bottom: 10px; }
+
+@media screen and (max-width: 420px) {
+	.main-blog--inner-section {
+		margin-top: 0 !important; }
+
+	.main-blog-section .post--grid {
+		padding-top: 0 !important; }
+}
+
 @media screen and (max-width: 1024px) {
-	.lead-blog-section .elementor-row > .elementor-column:not(:first-child) {
+	.main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) {
 		display: none; }
 }
 
@@ -873,27 +953,6 @@ body.page-id-25 .main-header {
 .toggle--img:not(.active) .wp-caption-text {
 	margin: -19px -25px 0 0; }
 
-.main-blog-section .btn--nav .elementor-row {
-	flex-direction: column; }
-
-.btn--nav .subtitle--lead.elementor-column,
-.btn--nav .button--grid.elementor-column {
-	width: 100% !important; }
-
-.main-blog-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
-	width: auto !important;
-	margin: 0 auto !important; }
-
-.subtitle--lead .elementor-widget-heading .elementor-heading-title {
-	font-size: 2.25rem; }
-
-.btn--nav	.button--grid.elementor-column {
-	margin-top: 22.5px; }
-
-.btn--nav .button--grid .elementor-button {
-	padding-top: 9px;
-	padding-bottom: 9px; }
-
 .inner-post--grid .elementor-posts > .elementor-grid-item:first-child {
 	display: none; }
 
@@ -903,7 +962,17 @@ body.page-id-25 .main-header {
 }
 
 .toggle-section {
-	display: none; }
+	display: none;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s; }
+
+@media screen and (max-width: 1024px) {
+	.toggle-section {
+		display: block; }
+}
 
 .toggle-section .elementor-row > .elementor-column .toggle--help-text,
 .toggle-section .elementor-row > .elementor-column .toggle--help-img {
@@ -923,9 +992,99 @@ body.page-id-25 .main-header {
 .toggle-section .toggle--button-trigger.align-right {
 	margin-left: 170px; }
 
-@media screen and (max-width: 1024px) {
-	.toggle-section {
+@media screen and (max-width: 991px) {
+	.toggle-section .toggle--button-trigger .elementor-spacer-inner {
+		height: 42px !important; }
+
+	.toggle-section .toggle--button-trigger.align-right {
+		margin-left: 155px; }
+}
+
+@media screen and (max-width: 886px) {
+	.toggle-section .toggle--button-trigger {
+		width: 22.5%; 
+		max-width: 22.5%; }
+
+	.toggle-section .toggle--button-trigger.align-right {
+		margin-left: 100px; }
+}
+
+/* Handle "bug" uneven toggle button change at 768px */
+.toggle-section .toggle--button-line.lg-size,
+.toggle-section .toggle--button-line.md-size,
+.toggle-section .toggle--button-trigger.lg-size,
+.toggle-section .toggle--button-trigger.md-size {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s; }
+
+.toggle-section .toggle--button-line.md-size,
+.toggle-section .toggle--button-trigger.md-size {
+	display: none; }
+
+@media screen and (max-width: 768px) {
+	.toggle-section .elementor-inner-section .elementor-row > .elementor-column {
+		width: 100% !important;	}
+
+	.toggle-section .toggle--button-line.lg-size,
+	.toggle-section .toggle--button-trigger.lg-size {
+		display: none; }
+
+	.toggle-section .toggle--button-line.md-size,
+	.toggle-section .toggle--button-trigger.md-size {
 		display: block; }
+
+	.toggle-section .toggle--button-line {
+		width: 30% !important; }
+
+	.toggle-section .toggle--button-trigger {
+		width: 7.125%; 
+		max-width: 7.125%;
+  	margin-top: 0;
+  	margin-left: -215px; }
+
+	.toggle-section .toggle--button-trigger.align-right {
+		margin-left: -98px; }
+}
+
+@media screen and (max-width: 420px) {
+	.toggle-section .elementor-inner-section {
+		margin-top: 25px !important; }
+
+	.toggle-section .toggle--button-line {
+		width: 60% !important; }
+
+	.toggle-section .toggle--button-line .elementor-spacer-inner {
+		height: 16.5px !important; }
+
+	.toggle-section .toggle--button-trigger {
+		width: 13.25%;
+		max-width: 13.25%; }
+
+	.toggle--help-img .elementor-image img {
+		width: 30% !important; }
+}
+
+@media screen and (max-width: 376px) {
+	.toggle-section .toggle--button-trigger {
+		width: 15.25%;
+		max-width: 15.25%;
+		margin-left: -188px; }
+
+	.toggle-section .elementor-row > .elementor-column .toggle--help-img {
+		margin-right: -50px !important; }
+}
+
+@media screen and (max-width: 320px) {
+	.toggle-section .toggle--button-trigger {
+		width: 18.25%;
+		max-width: 18.25%;
+		margin-left: -160px; }
+
+	.toggle-section .elementor-row > .elementor-column .toggle--help-img {
+		margin-right: -95px !important; }
 }
 
 .toggle--help-text.elementor-widget-text-editor {
@@ -936,9 +1095,34 @@ body.page-id-25 .main-header {
 	margin-left: -10px !important; 
 	margin-right: -310px !important; }
 
+@media screen and (max-width: 991px) {
+	.toggle-section .elementor-row > .elementor-column .toggle--help-text {
+		margin-right: -250px !important; }
+}
+
+@media screen and (max-width: 886px) {
+	.toggle-section .elementor-row > .elementor-column .toggle--help-text {
+		margin-right: -175px !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.toggle-section .elementor-row > .elementor-column .toggle--help-text {
+		margin-right: -330px !important; }
+}
+
+@media screen and (max-width: 420px) {
+	.toggle-section .elementor-row > .elementor-column .toggle--help-text {
+		margin-right: -65px !important; }
+}
+
 .toggle--help-text .elementor-text-editor > p {
 	font-size: 1.45rem !important; }
 
 .toggle--help-img .elementor-image img {
 	width: 40% !important; 
 	margin-top: -10px !important; }
+
+@media screen and (max-width: 420px) {
+	.toggle--help-img .elementor-image img {
+		width: 30% !important; }
+}
