@@ -63,26 +63,42 @@ jQuery(document).ready(function( $ ){
   // handle "more projects" navigation
   $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:first-child").click(function(event) {
     event.preventDefault();
+    // button switch
     $(this).addClass('active');
     $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:first-child)").removeClass('active');
+    // change posts
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:first-child").addClass('show');
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:not(:first-child)").removeClass('show');
   });
 
   $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(2)").click(function(event) {
     event.preventDefault();
+
     $(this).addClass('active');
     $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:nth-child(2))").removeClass('active');
+
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:nth-child(2)").addClass('show');
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:not(:nth-child(2))").removeClass('show');
   });
 
   $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(3)").click(function(event) {
     event.preventDefault();
+
     $(this).addClass('active');
     $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:nth-child(3))").removeClass('active');
+
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:nth-child(3)").addClass('show');
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:not(:nth-child(3))").removeClass('show');
   });
 
   $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:last-child").click(function(event) {
     event.preventDefault();
+
     $(this).addClass('active');
     $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:last-child)").removeClass('active');
+
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:last-child").addClass('show');
+    $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:not(:last-child)").removeClass('show');  
   });
 
 });
