@@ -14,18 +14,107 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hello-elementor-child
 */
 
+
 /* Global
    ========================================================================== */
 
-html, body {
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url('fonts/Montserrat-Black.eot');                           /* IE9 Compat Modes */
+  src: url('fonts/Montserrat-Black.woff2') format('woff2'),         /* Super Modern Browsers */
+       url('fonts/Montserrat-Black.woff') format('woff'),           /* Pretty Modern Browsers */
+       url('fonts/Montserrat-Black.ttf')  format('truetype'),       /* Safari, Android, iOS */
+       url('fonts/Montserrat-Black.svg') format('svg');             /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('fonts/Montserrat-ExtraBold.eot');
+  src: url('fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+       url('fonts/Montserrat-ExtraBold.woff') format('woff'),
+       url('fonts/Montserrat-ExtraBold.ttf')  format('truetype'),
+       url('fonts/Montserrat-ExtraBold.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('fonts/Montserrat-Regular.eot');
+  src: url('fonts/Montserrat-Regular.woff2') format('woff2'),
+       url('fonts/Montserrat-Regular.woff') format('woff'),
+       url('fonts/Montserrat-Regular.ttf')  format('truetype'),
+       url('fonts/Montserrat-Regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('fonts/Raleway-Regular.eot');
+  src: url('fonts/Raleway-Regular.woff2') format('woff2'),
+       url('fonts/Raleway-Regular.woff') format('woff'),
+       url('fonts/Raleway-Regular.ttf')  format('truetype'),
+       url('fonts/Raleway-Regular.svg') format('svg');
+}
+
+html,
+body {
 	font-size: 1.0625rem; }
 
-html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
-	font-family: Raleway, sans-serif; }
+html,
+body,
+.elementor-widget-text-editor,
+.elementor-widget-posts .elementor-post__excerpt p {
+	font-family: 'Raleway-Regular', sans-serif !important; }
+
+.title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
+	font-size: 3.15rem; }
+
+.elementor-widget-heading h1.elementor-heading-title {
+	font-family: 'Montserrat-Black', Sans-serif !important; 
+	font-size: 3.5rem; }
+
+.elementor-widget-posts .elementor-post__title, 
+.elementor-widget-posts .elementor-post__title a {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+body {
+	background-color: #F4F4F4; }
+
+.responsive-size {
+  margin: 0 auto; }
+
+.elementor-text-editor > p {
+	font-size: 1rem; }
+
+.hidden {
+	display: none; }
+
+.show {
+	display: block !important; }
+
+@media screen and (min-width: 1025px) and (max-width: 1212.98px) {
+	.responsive-size {
+		width: 990px !important; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1030px) {
+	.responsive-size {
+		max-width: 87.811% !important; }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991.98px) {
+	.responsive-size {
+		max-width: 84.811% !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.responsive-size {
+		max-width: 87.811% !important; }
+}
+
 
 /* Navbar
    ========================================================================== */
-   
+
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted, 
@@ -34,6 +123,12 @@ html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
 
 .main-header .elementor-top-column {
 	border-bottom: 1px solid #1C6CC2;	}
+
+.main-header .elementor-nav-menu--main .elementor-item {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+.main-header .elementor-nav-menu--main > ul > li:last-child .elementor-item {
+	padding-right: 0 !important; }
 
 @media screen and (max-width: 1024px) {
 	.main-header .elementor-top-column .elementor-nav-menu--toggle {
@@ -67,11 +162,671 @@ html, body, .elementor-widget-nav-menu .elementor-nav-menu .elementor-item {
 		width: 32px !important; }
 
 	.rmp-menu-wrap .rmp-menu-item-link {
+		font-family: 'Montserrat-Regular', Sans-serif !important;
 		font-size: 1.125rem !important;
-		font-family: Raleway, sans-serif !important; }
+		font-weight: 600 !important;
+		letter-spacing: .05rem; }
 }
 
 @media screen and (max-width: 768px) {
 	.rmp-container {
 		width: 75% !important; }
+
+	.rmp_menu_trigger {
+		height: 55px !important; }
 }
+
+@media screen and (max-width: 576px) {
+	.rmp_menu_trigger {
+		height: 42.5px !important; }
+}
+
+
+/* Footer
+   ========================================================================== */
+
+footer .elementor-widget-heading .elementor-heading-title {
+	font-family: 'Montserrat-Black', Sans-serif !important; }
+
+footer .elementor-widget-heading:last-of-type .elementor-heading-title {
+	font-family: 'Montserrat-Regular', Sans-serif !important; 
+	font-size: .85rem !important; }
+
+footer .elementor-widget-heading:first-of-type .elementor-heading-title {
+	font-size: 2.45rem; }
+
+footer .elementor-social-icon {
+	font-size: 1.85rem;
+  width: 1.85rem;
+  height: 1.85rem;
+	background-color: transparent !important; }
+
+footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-child(2) {
+	margin-left: -6px; }
+
+footer .elementor-widget-icon-list .elementor-icon-list-item, 
+footer .elementor-widget-icon-list .elementor-icon-list-item a {
+	font-family: 'Montserrat-Regular', Sans-serif !important; 
+	font-size: .9rem; }
+
+@media screen and (max-width: 1024px) {
+	footer:last-of-type {
+		background-color: #1B5989 !important; }
+
+	footer .elementor-social-icon {
+		font-size: 1.5rem;
+	  width: 1.5rem;
+	  height: 1.5rem; }
+
+  footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:first-child {
+		margin-left: -8px; }
+
+	footer .elementor-form .elementor-form-fields-wrapper > .elementor-column:first-child {
+		width: 80%; }
+}
+
+@media screen and (max-width: 768px) {
+	footer .elementor-form .elementor-form-fields-wrapper > .elementor-column:first-child {
+		width: 75%; }	
+}
+
+
+/* Home page
+   ========================================================================== */
+
+.post--grid .elementor-text-editor > p {
+	font-size: .9rem;
+	margin-right: .9rem; }
+
+.post--grid .elementor-posts .elementor-post__card {
+	overflow: visible;
+	border-radius: 8.5px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__badge {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600;
+	letter-spacing: .025rem;
+	margin-left: -10px !important; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__thumbnail {
+	border-top-left-radius: 8.5px;
+	border-top-right-radius: 8.5px; }
+
+.post--grid .elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+	margin-bottom: 0px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__title {
+	font-size: 17.25px;
+	font-weight: 600; }
+
+.post--grid .custom-divider {
+	padding-bottom: 10px; }
+
+.post--grid .custom-divider .post--title-divider {
+	display: block;
+	margin-right: 75%;
+	border-top: 2px solid #42ACE2; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__text {
+	padding: 12px; }
+
+.post--grid .elementor-posts .elementor-post__card .elementor-post__excerpt,
+.post--grid .elementor-posts .elementor-post__card .elementor-post__title {
+	margin-bottom: 7.5px; }
+
+.post--grid .elementor-widget-button .elementor-button {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600 !important;
+	font-size: 1.125rem;
+	text-align: left;
+	background-color: transparent; }
+
+
+@media screen and (max-width: 1024px) {
+	.post--grid:not(.projects--portfolio) .elementor-posts > .elementor-post:last-of-type,
+	.post--grid.courses--list .elementor-posts > .elementor-post:nth-of-type(3) {
+		display: none; }
+
+	.post--grid .elementor-posts .elementor-post__card .elementor-post__badge {
+		margin: 20px 20px 20px -10px !important; }
+
+	.post--grid .elementor-posts .elementor-post__card .elementor-post__text {
+		padding: 30px; }
+
+	.post--grid .custom-divider .post--title-divider {
+		margin-right: 80%; }
+}
+
+@media screen and (min-width: 1025px) {
+	.post--grid .elementor-widget-button .elementor-button .elementor-button-icon {
+		color: #42ACE2;
+		margin-top: 8.5px; }
+
+	.projects--portfolio {
+		display: none; }
+}
+
+.background-section .elementor-container .elementor-row > .elementor-column {
+	min-height: 1150px; }
+
+@media screen and (max-width: 1024px) {
+	.background-section .elementor-container .elementor-row > .elementor-column {
+		min-height: 485px; }
+
+	.background-section .elementor-container .elementor-row > .elementor-column:last-child {
+		min-height: 700px; }
+}
+
+.portfolio-section-wrapper {
+	margin-top: -1050px; }
+
+@media screen and (max-width: 1024px) {
+	.portfolio-section-wrapper {
+		margin-top: -1099px; }
+}
+
+.portfolio-section-2 .project--details .elementor-text-editor > p {
+	color: #FAFAFA; }
+
+.project--details .elementor-text-editor > p {
+	margin-bottom: .45rem; }
+
+.portfolio-section-2 .project--details .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+	border-top: 1px solid #FAFAFA; }
+
+.portfolio-section-2 .project--details .elementor-widget-icon.elementor-view-default .elementor-icon {
+	color: #FAFAFA;
+	border-color: #FAFAFA; }
+
+.portfolio-section-3 .project--details .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+	border-top: 1px solid #7A7A7A; }
+
+.portfolio-section-3 .project--details .elementor-widget-icon.elementor-view-default .elementor-icon {
+	color: #7A7A7A;
+	border-color: #7A7A7A; }
+
+.portfolio-section-4 .elementor-column .elementor-button {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-weight: 600 !important; 
+	letter-spacing: .05rem; }
+
+.portfolio-section-4 .elementor-column:first-of-type .elementor-button {
+	padding: 25px 70px; }
+
+.portfolio-section-4 .elementor-column:last-of-type .elementor-button {
+	padding: 25px 40px; }
+
+.portfolio-section-4 .elementor-column .elementor-button:focus,
+.portfolio-section-4 .elementor-column .elementor-button:hover,
+.portfolio-section-4 .elementor-column .elementor-button:active {
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25); }
+
+.project--img > div,
+.project--title > div {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7A7A7A; }
+
+.project--img > div {
+	overflow: hidden;
+	border-right-width: 0;
+	box-shadow: -2px 0px 10px 0px rgba(0,0,0,0.25);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px; }
+
+.project--title > div {
+	border-left-width: 0; 
+	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.125);
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px; }
+
+.project--title .elementor-widget-heading:first-of-type .elementor-heading-title {
+	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
+	font-size: 1.75rem; }
+
+.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title,
+.project--title .elementor-widget-heading:nth-of-type(3) .elementor-heading-title {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title { 
+	padding-top: 7.5px;
+	padding-bottom: 7.5px; }
+
+.project--title .elementor-widget-heading:nth-of-type(3) .elementor-heading-title {
+	font-size: .825rem; }
+
+.projects--portfolio .elementor-card-shadow-yes .elementor-post__card {
+	box-shadow: none; }
+
+.post--grid.projects--portfolio .elementor-post .elementor-post__card {
+	background-color: transparent; }
+
+@media screen and (max-width: 1024px) {
+	.elementor-button.elementor-size-lg {
+		padding: 20px 92px;	}
+
+	.portfolio-section-2 > .elementor-container	.elementor-row, 
+	.portfolio-section-3 > .elementor-container	.elementor-row,
+	.portfolio-section-4 > .elementor-container	.elementor-row {
+		flex-direction: column;	
+		flex-wrap: nowrap; }
+
+	.portfolio-section-2,
+	.portfolio-section-3 {
+		width: 40% !important; }
+
+	.portfolio-section-2 {
+		margin-left: 8%;
+		margin-right: 2%; }
+
+	.portfolio-section-3 {
+		margin-left: 2%;
+		margin-right: 8%; }
+
+	.portfolio-section-2,
+	.portfolio-section-3 {
+		margin-bottom: 20px !important;	}
+
+	.portfolio-section-3 {
+		margin-top: 30px !important;	}
+
+	.portfolio-section-3 .elementor-row > .elementor-column:first-child {
+		order: 3; }
+
+	.portfolio-section-4 {
+		margin-top: 10px !important;
+		margin-bottom: 26.75px !important; 
+		padding: 0 0 50px 0 !important; }
+
+	.portfolio-section-4 .elementor-row .elementor-widget-button {
+		text-align: center !important; }
+
+	.portfolio-section-4 .elementor-row .elementor-column:last-child .elementor-column-wrap {
+		padding: 20px 0 0 0 !important;	}
+
+	.portfolio-section-4 .elementor-row .elementor-column {
+		width: 100% !important;	}
+
+	.portfolio-section-4 .elementor-column:first-of-type .elementor-button {
+		padding: 20px 100px; 
+		color: #FFFFFF !important;
+		border-color: #FFFFFF !important; 
+		background-color: transparent !important; }
+
+	.portfolio-section-4 .elementor-column:last-of-type .elementor-button {
+		padding: 20px 60px; }
+
+	.project--img,
+	.project--title,
+	.project--details {
+		width: 100% !important;	}
+
+	.project--img > div {
+		border-radius: 8.5px;	}
+
+	.project--img {
+		height: 50%;	}
+
+	.project--img .elementor-image img {
+		height: 320px !important;	}
+
+	.project--title .elementor-column-wrap {
+		padding: 25px 15px 0 !important;
+		background-color: transparent !important; }
+
+	.project--title > div {
+		border: none;
+		box-shadow: none;	}
+
+	.project--title .elementor-heading-title {
+		margin-bottom: 5px;
+		color: #FFFFFF !important; }
+
+	.project--title .elementor-column-wrap .elementor-widget-wrap > div:not(:first-of-type) {
+		display: inline-flex !important;
+		width: auto !important;	}
+
+	.project--title .elementor-column-wrap .elementor-widget-wrap > div:last-child .elementor-heading-title {
+		font-size: 1.25rem;
+		padding-left: 10px;	}
+
+	.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title {
+		padding-top: 0;
+		padding-bottom: 0; }
+
+	.project--details .elementor-widget-divider,
+	.project--details .elementor-widget-icon {
+		display: none; }
+
+	.project--details .elementor-widget-text-editor > div {
+		padding: 10px 15px 0 !important;
+		color: #FFFFFF !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.post--grid .elementor-grid {
+		display: block;	}
+
+	.post--grid .elementor-posts > .elementor-post:not(:first-of-type),
+	.portfolio-section-3 {
+		display: none; }
+
+	.portfolio-section-2 {
+		margin: 40px auto !important;
+		width: 100% !important; }
+
+	.project--img {
+		height: auto;	}
+
+	.courses-section {
+		padding-top: 80px !important;	}
+}
+
+.projects--portfolio .elementor-posts .elementor-post__card .elementor-post__thumbnail {
+	border: 1px solid #7A7A7A;
+	border-radius: 8.5px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.125); }
+
+.projects--portfolio .elementor-posts__hover-gradient .elementor-post__card .elementor-post__thumbnail__link:after {
+	opacity: 0.15;
+	border-radius: 8.5px; }
+
+.projects--portfolio.post--grid .custom-divider .post--title-divider {
+	display: none; }
+
+.courses-section {
+	padding-top: 90px !important; }
+
+@media screen and (max-width: 420px) {
+	.post--grid {
+		padding-top: 60px !important;
+		padding-bottom: 30px !important; }
+
+	.courses-section {
+		padding-top: 15px !important;	}
+
+	.courses-section .post--grid {
+		padding-top: 15px !important;	}
+
+	.courses-section .post--grid:not(.courses--list) {
+		padding-bottom: 22.5px !important;	}
+
+	.courses-section .post--grid:not(.courses--list) .elementor-column:first-of-type > .elementor-column-wrap {
+		padding-bottom: 0 !important; }
+
+	.post--grid .elementor-column:last-of-type > .elementor-column-wrap {
+		padding-top: 0 !important; }
+
+	.post--grid.courses--list {
+		padding-bottom: 60px !important;	}
+
+	.portfolio-section-wrapper {
+		margin-top: -1110px; }
+
+	.project--img .elementor-image img {
+		height: 300px !important;	}
+
+	.portfolio-section-2 {
+		margin: 15px auto !important; }
+}
+
+
+/* About-me page
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+	body.page-id-23 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-23 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-23 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+
+	.about-me-section {
+		padding-top: 50px !important; }
+
+	.about-me-section > .elementor-container > .elementor-row {
+		flex-direction: column-reverse; }
+
+	.about-me-section > .elementor-container > .elementor-row > .elementor-column {
+		width: 100% !important;	}
+
+	.about-me-section > .elementor-container > .elementor-row > .elementor-column:first-child {
+		background-color: #FFFFFF; }
+
+	.about-me--title {
+		display: inline-flex;
+		padding-top: 65px;
+		padding-bottom: 30px;
+		width: auto !important;	}
+
+	.about-me--title:not(:first-of-type) {
+		padding-left: 10px;	}
+}
+
+
+/* Contact-me page
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+	body.page-id-21 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-21 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-21 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+}
+
+.contact-me--form {
+	margin-top: 48px; }
+
+.contact-me--form .elementor-field-group {
+	margin-bottom: 32px !important; }
+
+.contact-me--form .elementor-field-group .elementor-field-label,
+.contact-me--form .elementor-field-group .elementor-field-textual {
+	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+.contact-me--form textarea.elementor-field-textual {
+	padding: 14px 16.5px; }
+
+.contact-me--form .elementor-button.elementor-size-md {
+	font-family: 'Montserrat-Regular', Sans-serif !important;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: .05rem;
+	padding: 25px 40px; }
+
+.contact-me--inner-section .contact-me--title-size-md {
+	display: none; }
+
+@media screen and (max-width: 1024px) {
+	.contact-me-section {
+		padding-top: 50px !important; }
+
+	.contact-me-section > .elementor-container > .elementor-row > .elementor-column {
+		width: 100% !important;	}
+
+	.contact-me-section > .elementor-container > .elementor-row > .elementor-column:not(:first-child) {
+		background-color: #FFFFFF; }
+
+	.contact-me-section .elementor-container > .elementor-row .elementor-column:nth-child(2) .contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {
+		flex-wrap: nowrap;
+		flex-direction: column; }
+
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-field-group:last-of-type {
+		width: 100% !important; }
+
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-button {
+		max-width: 50%;
+		margin: 0 auto; }
+
+	.contact-me--inner-section .contact-me--title {
+		display: none; }
+
+	.contact-me--inner-section .contact-me--title-size-md {
+		padding-top: 65px;
+		padding-bottom: 30px;
+		text-align: center;
+		display: block; }
+}
+
+@media screen and (max-width: 420px) {
+	.contact-me--inner-section .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap .elementor-form .elementor-button {
+		max-width: 75%; }	
+}
+
+
+/* My-portfolio page
+   ========================================================================== */
+
+body.page-id-25,
+body.page-id-25 .main-header {
+	background-color: #FFFFFF !important; }
+
+.my-portfolio-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-size: 2.65rem; }
+
+.my-portfolio-section .elementor-widget-heading h1.elementor-heading-title {
+	font-size: 3rem; }
+
+.my-portfolio-section	.portfolio-section-2 .project--details .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+	border-top: 1px solid #42ACE2; }
+
+.my-portfolio-section .portfolio-section-2 .project--details .elementor-widget-icon.elementor-view-default .elementor-icon {
+	color: #7A7A7A;
+	border-color: #7A7A7A; }
+
+.my-portfolio-section .portfolio-section-2 .project--details .elementor-text-editor > p {
+	color: #7A7A7A; }
+
+.more-projects-section {
+	padding-top: 50px !important; }
+
+.more-projects-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-size: 2.5rem; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+	display: inline-flex; 
+	justify-content: flex-end; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button .elementor-button {
+	border: 2px solid #7A7A7A;
+	color: #7A7A7A;
+	background-color: transparent; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button.active .elementor-button {
+	border: 2px solid #1C6CC2;
+	color: #FAFAFA;
+	background-color: #1C6CC2; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:first-child {
+	width: 33%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(2) {
+	width: 21%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(3) {
+	width: 26%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:last-child {
+	width: 20%; }
+
+@media screen and (max-width: 1212px) {
+	.more-projects--title.elementor-column {
+		width: 35% !important; }
+
+	.button--grid.elementor-column {
+		width: 65% !important; }
+
+	.button--grid .elementor-button {
+		padding: 20px 21.5px !important; }
+}
+
+@media screen and (max-width: 1030px) {
+	.button--grid .elementor-button {
+		padding: 20px 15px !important; }
+}
+
+@media screen and (max-width: 1024px) {
+	.my-portfolio-section .portfolio-section-2 {
+		width: 100% !important;	}
+
+	.my-portfolio-section .portfolio-section-2 {
+		margin-left: auto;
+		margin-right: auto; }
+
+	.my-portfolio-section .project--img,
+	.my-portfolio-section .project--title, 
+	.my-portfolio-section .project--details {
+		width: 85% !important; }
+
+	.my-portfolio-section .project--title .elementor-heading-title {
+		color: #7A7A7A !important; }
+
+	.more-projects--title.elementor-column,
+	.button--grid.elementor-column {
+		width: 100% !important; }
+
+	.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+		width: auto !important;
+		margin: 0 auto !important; }
+
+	.button--grid .elementor-button {
+		padding: 20px 45px !important; }
+}
+
+@media screen and (max-width: 899px) {
+	.my-portfolio-section .project--img,
+	.my-portfolio-section .project--title, 
+	.my-portfolio-section .project--details {
+		width: 100% !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.button--grid .elementor-button {
+		padding: 20px 35px !important; }
+}
+
+@media screen and (max-width: 678px) {
+	.button--grid .elementor-button {
+		padding: 20px 15px !important; }
+}
+
+@media screen and (max-width: 486px) {
+	.button--grid.elementor-column {
+		margin-top: 22.5px; }
+
+	.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+		margin: 0 auto 10px !important; }
+
+	.button--grid .elementor-button {
+		padding: 12px 11.5px !important; }
+}
+
+.projects--list .elementor-posts .elementor-post__card {
+	background-color: transparent; }
+
+.projects--list .elementor-card-shadow-yes .elementor-post__card {
+	-webkit-box-shadow: none;
+	box-shadow: none; }
+
+.projects--list.post--grid .elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+	border: 1px solid #7A7A7A; 
+	border-radius: 8.5px; 
+	overflow: hidden; }
+
+.projects--list .elementor-posts__hover-gradient .elementor-post__card .elementor-post__thumbnail__link:after {
+	opacity: 0.25; }
+
+@media screen and (max-width: 768px) {
+	.projects--list.post--grid .elementor-posts > .elementor-post:not(:first-of-type) {
+		display: block;	}
+}
+
