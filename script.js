@@ -101,6 +101,16 @@ jQuery(document).ready(function( $ ){
     $(".projects--list .elementor-row .elementor-widget-wrap > .elementor-widget-posts:not(:last-child)").removeClass('show');  
   });
 
+  /* Blog page
+  ========================================================================== */
+  // toggle button functionality
+  $(".toggle-section .toggle--button-trigger").click(
+    function(event) {
+
+    event.preventDefault();
+    $(this).toggleClass('align-right');
+
+  });
 });
 
 
