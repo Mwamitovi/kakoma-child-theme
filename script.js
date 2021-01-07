@@ -52,12 +52,40 @@ jQuery(document).ready(function( $ ){
       // contact-me page
       $('.contact-me-section').addClass('responsive-size');
       $('.contact-me--inner-section').removeClass('responsive-size');
-      
+
     }
   }).resize(); // trigger resize event initially
-      
-});
 
+
+  /* Portfolio page
+   ========================================================================== */
+
+  // handle "more projects" navigation
+  $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:first-child").click(function(event) {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:first-child)").removeClass('active');
+  });
+
+  $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(2)").click(function(event) {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:nth-child(2))").removeClass('active');
+  });
+
+  $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(3)").click(function(event) {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:nth-child(3))").removeClass('active');
+  });
+
+  $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:last-child").click(function(event) {
+    event.preventDefault();
+    $(this).addClass('active');
+    $(".more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:not(:last-child)").removeClass('active');
+  });
+
+});
 
 
 
