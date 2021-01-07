@@ -85,6 +85,12 @@ body {
 .elementor-text-editor > p {
 	font-size: 1rem; }
 
+.hidden {
+	display: none; }
+
+.show {
+	display: block !important; }
+
 @media screen and (min-width: 1025px) and (max-width: 1212.98px) {
 	.responsive-size {
 		width: 990px !important; }
@@ -108,39 +114,6 @@ body {
 
 /* Navbar
    ========================================================================== */
-   
-/* portfolio page */
-
-body.page-id-25 .main-header {
-	background-color: #FFFFFF !important; }
-
-/* about-me page */
-
-@media screen and (max-width: 1024px) {
-	body.page-id-23 .main-header {
-		padding-bottom: 0 !important;
-		background-color: #FFFFFF !important; }
-
-	body.page-id-23 .main-header .elementor-top-column {
-		border-bottom: none; }
-
-	body.page-id-23 .main-header .elementor-top-column > .elementor-column-wrap {
-		border-color: transparent !important; }
-}
-
-/* contact-me page */
-
-@media screen and (max-width: 1024px) {
-	body.page-id-21 .main-header {
-		padding-bottom: 0 !important;
-		background-color: #FFFFFF !important; }
-
-	body.page-id-21 .main-header .elementor-top-column {
-		border-bottom: none; }
-
-	body.page-id-21 .main-header .elementor-top-column > .elementor-column-wrap {
-		border-color: transparent !important; }
-}
 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover, 
 .elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active, 
@@ -153,6 +126,9 @@ body.page-id-25 .main-header {
 
 .main-header .elementor-nav-menu--main .elementor-item {
 	font-family: 'Montserrat-Regular', Sans-serif !important; }
+
+.main-header .elementor-nav-menu--main > ul > li:last-child .elementor-item {
+	padding-right: 0 !important; }
 
 @media screen and (max-width: 1024px) {
 	.main-header .elementor-top-column .elementor-nav-menu--toggle {
@@ -186,8 +162,10 @@ body.page-id-25 .main-header {
 		width: 32px !important; }
 
 	.rmp-menu-wrap .rmp-menu-item-link {
+		font-family: 'Montserrat-Regular', Sans-serif !important;
 		font-size: 1.125rem !important;
-		font-family: Raleway, sans-serif !important; }
+		font-weight: 600 !important;
+		letter-spacing: .05rem; }
 }
 
 @media screen and (max-width: 768px) {
@@ -333,10 +311,10 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 @media screen and (max-width: 1024px) {
 	.background-section .elementor-container .elementor-row > .elementor-column {
-		min-height: 455px; }
+		min-height: 485px; }
 
 	.background-section .elementor-container .elementor-row > .elementor-column:last-child {
-		min-height: 680px; }
+		min-height: 700px; }
 }
 
 .portfolio-section-wrapper {
@@ -344,7 +322,7 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 @media screen and (max-width: 1024px) {
 	.portfolio-section-wrapper {
-		margin-top: -1052px; }
+		margin-top: -1099px; }
 }
 
 .portfolio-section-2 .project--details .elementor-text-editor > p {
@@ -369,7 +347,8 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 .portfolio-section-4 .elementor-column .elementor-button {
 	font-family: 'Montserrat-Regular', Sans-serif !important;
-	font-weight: 600 !important; }
+	font-weight: 600 !important; 
+	letter-spacing: .05rem; }
 
 .portfolio-section-4 .elementor-column:first-of-type .elementor-button {
 	padding: 25px 70px; }
@@ -456,7 +435,7 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 	.portfolio-section-4 {
 		margin-top: 10px !important;
-		margin-bottom: 40px !important; 
+		margin-bottom: 26.75px !important; 
 		padding: 0 0 50px 0 !important; }
 
 	.portfolio-section-4 .elementor-row .elementor-widget-button {
@@ -469,7 +448,7 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 		width: 100% !important;	}
 
 	.portfolio-section-4 .elementor-column:first-of-type .elementor-button {
-		padding: 20px 90px; 
+		padding: 20px 100px; 
 		color: #FFFFFF !important;
 		border-color: #FFFFFF !important; 
 		background-color: transparent !important; }
@@ -510,6 +489,10 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 	.project--title .elementor-column-wrap .elementor-widget-wrap > div:last-child .elementor-heading-title {
 		font-size: 1.25rem;
 		padding-left: 10px;	}
+
+	.project--title .elementor-widget-heading:nth-of-type(2) .elementor-heading-title {
+		padding-top: 0;
+		padding-bottom: 0; }
 
 	.project--details .elementor-widget-divider,
 	.project--details .elementor-widget-icon {
@@ -552,7 +535,7 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 	display: none; }
 
 .courses-section {
-	padding-top: 55px !important; }
+	padding-top: 90px !important; }
 
 @media screen and (max-width: 420px) {
 	.post--grid {
@@ -592,6 +575,16 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
    ========================================================================== */
 
 @media screen and (max-width: 1024px) {
+	body.page-id-23 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-23 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-23 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+
 	.about-me-section {
 		padding-top: 50px !important; }
 
@@ -617,6 +610,18 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 /* Contact-me page
    ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+	body.page-id-21 .main-header {
+		padding-bottom: 0 !important;
+		background-color: #FFFFFF !important; }
+
+	body.page-id-21 .main-header .elementor-top-column {
+		border-bottom: none; }
+
+	body.page-id-21 .main-header .elementor-top-column > .elementor-column-wrap {
+		border-color: transparent !important; }
+}
 
 .contact-me--form {
 	margin-top: 48px; }
@@ -678,6 +683,150 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 }
 
 
+/* My-portfolio page
+   ========================================================================== */
 
+body.page-id-25,
+body.page-id-25 .main-header {
+	background-color: #FFFFFF !important; }
 
+.my-portfolio-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-size: 2.65rem; }
+
+.my-portfolio-section .elementor-widget-heading h1.elementor-heading-title {
+	font-size: 3rem; }
+
+.my-portfolio-section	.portfolio-section-2 .project--details .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+	border-top: 1px solid #42ACE2; }
+
+.my-portfolio-section .portfolio-section-2 .project--details .elementor-widget-icon.elementor-view-default .elementor-icon {
+	color: #7A7A7A;
+	border-color: #7A7A7A; }
+
+.my-portfolio-section .portfolio-section-2 .project--details .elementor-text-editor > p {
+	color: #7A7A7A; }
+
+.more-projects-section {
+	padding-top: 50px !important; }
+
+.more-projects-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
+	font-size: 2.5rem; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+	display: inline-flex; 
+	justify-content: flex-end; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button .elementor-button {
+	border: 2px solid #7A7A7A;
+	color: #7A7A7A;
+	background-color: transparent; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button.active .elementor-button {
+	border: 2px solid #1C6CC2;
+	color: #FAFAFA;
+	background-color: #1C6CC2; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:first-child {
+	width: 33%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(2) {
+	width: 21%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:nth-child(3) {
+	width: 26%; }
+
+.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button:last-child {
+	width: 20%; }
+
+@media screen and (max-width: 1212px) {
+	.more-projects--title.elementor-column {
+		width: 35% !important; }
+
+	.button--grid.elementor-column {
+		width: 65% !important; }
+
+	.button--grid .elementor-button {
+		padding: 20px 21.5px !important; }
+}
+
+@media screen and (max-width: 1030px) {
+	.button--grid .elementor-button {
+		padding: 20px 15px !important; }
+}
+
+@media screen and (max-width: 1024px) {
+	.my-portfolio-section .portfolio-section-2 {
+		width: 100% !important;	}
+
+	.my-portfolio-section .portfolio-section-2 {
+		margin-left: auto;
+		margin-right: auto; }
+
+	.my-portfolio-section .project--img,
+	.my-portfolio-section .project--title, 
+	.my-portfolio-section .project--details {
+		width: 85% !important; }
+
+	.my-portfolio-section .project--title .elementor-heading-title {
+		color: #7A7A7A !important; }
+
+	.more-projects--title.elementor-column,
+	.button--grid.elementor-column {
+		width: 100% !important; }
+
+	.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+		width: auto !important;
+		margin: 0 auto !important; }
+
+	.button--grid .elementor-button {
+		padding: 20px 45px !important; }
+}
+
+@media screen and (max-width: 899px) {
+	.my-portfolio-section .project--img,
+	.my-portfolio-section .project--title, 
+	.my-portfolio-section .project--details {
+		width: 100% !important; }
+}
+
+@media screen and (max-width: 768px) {
+	.button--grid .elementor-button {
+		padding: 20px 35px !important; }
+}
+
+@media screen and (max-width: 678px) {
+	.button--grid .elementor-button {
+		padding: 20px 15px !important; }
+}
+
+@media screen and (max-width: 486px) {
+	.button--grid.elementor-column {
+		margin-top: 22.5px; }
+
+	.more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
+		margin: 0 auto 10px !important; }
+
+	.button--grid .elementor-button {
+		padding: 12px 11.5px !important; }
+}
+
+.projects--list .elementor-posts .elementor-post__card {
+	background-color: transparent; }
+
+.projects--list .elementor-card-shadow-yes .elementor-post__card {
+	-webkit-box-shadow: none;
+	box-shadow: none; }
+
+.projects--list.post--grid .elementor-posts--thumbnail-top .elementor-post__thumbnail__link {
+	border: 1px solid #7A7A7A; 
+	border-radius: 8.5px; 
+	overflow: hidden; }
+
+.projects--list .elementor-posts__hover-gradient .elementor-post__card .elementor-post__thumbnail__link:after {
+	opacity: 0.25; }
+
+@media screen and (max-width: 768px) {
+	.projects--list.post--grid .elementor-posts > .elementor-post:not(:first-of-type) {
+		display: block;	}
+}
 
