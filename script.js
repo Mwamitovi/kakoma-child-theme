@@ -103,14 +103,102 @@ jQuery(document).ready(function( $ ){
 
   /* Blog page
   ========================================================================== */
-  // toggle button functionality
+    
+  // toggle "image" functionality
+  $(".main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) .elementor-widget-wrap > div.toggle--img:nth-child(2)").click(
+    function(event) {
+
+    event.preventDefault();
+
+    // switch sections
+    $(".main-blog-section.engineer").addClass('show');
+    $(".main-blog-section.design").removeClass('show');
+
+    // handle "active" image
+    $(this).addClass("active");
+    $(".main-blog-section.engineer .main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) .elementor-widget-wrap > div.toggle--img:not(:nth-child(2))").removeClass('active');
+
+  });
+
+  $(".main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) .elementor-widget-wrap > div.toggle--img:nth-child(4)").click(
+    function(event) {
+
+    event.preventDefault();
+
+    // switch sections
+    $(".main-blog-section.engineer").removeClass('show');
+    $(".main-blog-section.design").addClass('show');
+
+    // handle "active" image
+    $(this).addClass("active");
+    $(".main-blog-section.design .main-blog--inner-section .elementor-row > .elementor-column:not(:first-child) .elementor-widget-wrap > div.toggle--img:not(:nth-child(4))").removeClass('active');
+
+  });
+
+  // toggle "button" functionality
   $(".toggle-section .toggle--button-trigger").click(
     function(event) {
 
     event.preventDefault();
-    $(this).toggleClass('align-right');
+
+    // switch on/off
+    $(".lg-size.toggle--button-trigger, .md-size.toggle--button-trigger").toggleClass('align-right');
+    // switch sections
+    $(".main-blog-section.engineer, .main-blog-section.design").toggleClass('show');
 
   });
+
+  // handle "category" navigation
+  $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:first-child .elementor-button").click(function(event) {
+    event.preventDefault();
+    // button switch
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:first-child").addClass('active');
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:not(:first-child)").removeClass('active');
+    // change "category"
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:nth-child(3)").addClass('show');
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:not(:nth-child(3))").removeClass('show');
+  });
+
+  $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(2) .elementor-button").click(function(event) {
+    event.preventDefault();
+
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(2)").addClass('active');
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:not(:nth-child(2))").removeClass('active');
+  
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:nth-child(4)").addClass('show');
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:not(:nth-child(4))").removeClass('show');
+  });
+
+  $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(3) .elementor-button").click(function(event) {
+    event.preventDefault();
+
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(3)").addClass('active');
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:not(:nth-child(3))").removeClass('active');
+  
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:nth-child(5)").addClass('show');
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:not(:nth-child(5))").removeClass('show');
+  });
+
+  $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(4) .elementor-button").click(function(event) {
+    event.preventDefault();
+
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:nth-child(4)").addClass('active');
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:not(:nth-child(4))").removeClass('active');
+  
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:nth-child(6)").addClass('show');
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:not(:nth-child(6))").removeClass('show');
+  });
+
+  $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:last-child .elementor-button").click(function(event) {
+    event.preventDefault();
+
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:last-child").addClass('active');
+    $(".main-blog-section .btn--nav .button--grid .elementor-widget-button:not(:last-child)").removeClass('active');
+  
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:last-child").addClass('show');
+    $(".main-blog-section .elementor-row .elementor-widget-wrap > section:not(:last-child").removeClass('show');
+  });
+
 });
 
 
