@@ -73,6 +73,9 @@ body,
 .elementor-widget-posts .elementor-post__excerpt p {
 	font-family: 'Raleway-Regular', sans-serif !important; }
 
+body {
+	background-color: #F4F4F4; }
+
 .title__lead.elementor-widget-heading h1.elementor-heading-title {
 	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
 	font-size: 3.15rem; }
@@ -105,8 +108,16 @@ body,
 .elementor-widget-posts .elementor-post__title a {
 	font-family: 'Montserrat-Regular', Sans-serif !important; }
 
-body {
-	background-color: #F4F4F4; }
+.elementor-widget-image.md-size {
+	display: none; }
+
+@media screen and (max-width: 1024px) {
+	.elementor-widget-image.lg-size {
+		display: none; }	
+
+	.elementor-widget-image.md-size {
+		display: block; }
+}
 
 .responsive-size {
   margin: 0 auto; }
