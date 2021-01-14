@@ -76,8 +76,10 @@ body,
 body {
 	background-color: #F4F4F4; }
 
+.title__lead.elementor-widget-heading .elementor-heading-title {
+	font-family: 'Montserrat-ExtraBold', Sans-serif !important; }
+
 .title__lead.elementor-widget-heading h1.elementor-heading-title {
-	font-family: 'Montserrat-ExtraBold', Sans-serif !important; 
 	font-size: 3.15rem; }
 
 @media screen and (max-width: 420px) {
@@ -236,7 +238,8 @@ footer .elementor-widget-heading .elementor-heading-title {
 
 footer .elementor-widget-heading:last-of-type .elementor-heading-title {
 	font-family: 'Montserrat-Regular', Sans-serif !important; 
-	font-size: .85rem !important; }
+	font-size: .85rem !important;
+	font-weight: 600 !important; }
 
 footer .elementor-widget-heading:first-of-type .elementor-heading-title {
 	font-size: 2.45rem; }
@@ -259,7 +262,8 @@ footer .large--icons .elementor-social-icons-wrapper > .elementor-grid-item:nth-
 footer .elementor-widget-icon-list .elementor-icon-list-item, 
 footer .elementor-widget-icon-list .elementor-icon-list-item a {
 	font-family: 'Montserrat-Regular', Sans-serif !important; 
-	font-size: .9rem; }
+	font-size: .9rem;
+	font-weight: 600 !important; }
 
 @media screen and (max-width: 1024px) {
 	footer:last-of-type {
@@ -285,6 +289,11 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 /* Home page
    ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+	.bg--icon {
+		background-image: none !important; }
+}
 
 .post--grid .elementor-text-editor > p {
 	font-size: .9rem;
@@ -373,12 +382,32 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 		min-height: 700px; }
 }
 
+@media screen and (min-width: 421px) and (max-width: 620px) {
+	.background-section .elementor-container .elementor-row > .elementor-column:last-child {
+		min-height: 750px; }
+}
+
 .portfolio-section-wrapper {
 	margin-top: -1050px; }
 
 @media screen and (max-width: 1024px) {
 	.portfolio-section-wrapper {
 		margin-top: -1099px; }
+}
+
+@media screen and (min-width: 421px) and (max-width: 620px) {
+	.portfolio-section-wrapper {
+		margin-top: -1175px; }
+}
+
+@media screen and (max-width: 420px) {
+	.portfolio-section-wrapper {
+		margin-top: -1110px; }
+}
+
+@media screen and (max-width: 322px) {
+	.portfolio-section-wrapper {
+		margin-top: -1168px; }
 }
 
 .portfolio-section-2 .project--details .elementor-text-editor > p {
@@ -578,10 +607,14 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 		padding-top: 80px !important;	}
 }
 
-
 @media screen and (max-width: 420px) {
 	.elementor-button.elementor-size-lg {
 		padding: 20px 40px;	}
+}
+
+@media screen and (max-width: 369px) {
+	.portfolio-section-4 .elementor-column:first-of-type .elementor-button {
+		padding: 20px 74px; }
 }
 
 .projects--portfolio .elementor-posts .elementor-post__card .elementor-post__thumbnail {
@@ -598,6 +631,11 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 .courses-section {
 	padding-top: 90px !important; }
+
+@media screen and (max-width: 768px) {
+	.post--grid.courses--list {
+		padding-bottom: 60px !important; }
+}
 
 @media screen and (max-width: 420px) {
 	.post--grid {
@@ -618,12 +656,6 @@ footer .elementor-widget-icon-list .elementor-icon-list-item a {
 
 	.post--grid .elementor-column:last-of-type > .elementor-column-wrap {
 		padding-top: 0 !important; }
-
-	.post--grid.courses--list {
-		padding-bottom: 60px !important;	}
-
-	.portfolio-section-wrapper {
-		margin-top: -1110px; }
 
 	.project--img .elementor-image img {
 		height: 300px !important;	}
@@ -758,6 +790,18 @@ body.page-id-25 .main-header {
 .my-portfolio-section .elementor-widget-heading h1.elementor-heading-title {
 	font-size: 3rem; }
 
+.my-portfolio-section .featured-project .elementor-widget-heading h2.elementor-heading-title {
+	font-size: 2.5rem; }
+
+@media screen and (max-width: 420px) {
+	.my-portfolio-section .title__lead.elementor-widget-heading h1.elementor-heading-title,
+	.my-portfolio-section .featured-project .elementor-widget-heading h2.elementor-heading-title {
+		font-size: 2.15rem; }
+
+	.my-portfolio-section .elementor-widget-heading h1.elementor-heading-title {
+		font-size: 2.5rem; }
+}
+
 .my-portfolio-section	.portfolio-section-2 .project--details .elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
 	border-top: 1px solid #42ACE2; }
 
@@ -773,6 +817,12 @@ body.page-id-25 .main-header {
 
 .more-projects-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
 	font-size: 2.5rem; }
+
+@media screen and (max-width: 420px) {
+	.more-projects-section .title__lead.elementor-widget-heading h1.elementor-heading-title {
+		font-size: 2.15rem;
+		margin-bottom: 28px; }
+}	
 
 .more-projects-section .button--grid .elementor-widget-wrap > .elementor-widget-button {
 	display: inline-flex; 
@@ -1222,5 +1272,10 @@ body.archive .background-section {
 
 .main-blog-section .posts--section {
 	z-index: 9999; }
+
+.posts--section.post--grid .elementor-row > .elementor-column:first-child .elementor-posts-container.elementor-has-item-ratio .elementor-post__thumbnail img {
+	height: 100% !important;
+	width: auto !important;
+}
 
 
