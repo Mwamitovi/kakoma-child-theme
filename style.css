@@ -945,7 +945,7 @@ body.page-id-25 .main-header {
 }
 
 
-/* Blog page
+/* Blog (archive) page
    ========================================================================== */
 
 body.archive .background-section {
@@ -1277,5 +1277,21 @@ body.archive .background-section {
 	height: 100% !important;
 	width: auto !important;
 }
+
+
+/* Single post page
+   ========================================================================== */
+
+body.single-post .elementor-widget-theme-post-content {
+	font-family: 'Raleway-Regular', sans-serif !important;
+	color: #54595F !important; }
+
+body.single-post .elementor-widget-nav-menu .elementor-nav-menu--main > ul > li:last-child > a {
+	color: #1C6CC2 !important;
+	font-weight: 600 !important; }
+
+body.single-post a {
+	color: #42ACE2 !important; }
+
 
 
